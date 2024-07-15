@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-proofer-ignore>
+    <head>
+        <title>flowfinder</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+
+    <body>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+        <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+        <div class="box">
+            <div class="row options">
+                <img class="header-image" src="./imgs/LOGO.png"></img>
+                <div class="option">
+                    <p>Load .dot file:</p>
+                    <input type="file" id="file-input">
+                </div>
+                <div class="option">
+                    <p>Highlight Color:</p><input type="color" id="highlight" value="#CD5C5C">
+                </div>
+                <div class="option">
+                    <label for="vehicle1"> Verbose Frida Output </label><br>
+                    <input type="checkbox" id="verbose" checked>
+                </div>
+                <div class="option">
+                    <button onclick="generateFridaScript()">Generate Frida Script</button>
+                </div>
+            </div>
+            <div class="row content" id="graph-holder">
+                <div id="graph"></div>
+            </div>
+            <div class="row footer">
+                Signal 11 Research Ltd. - <a href="https://s11research.com">https://s11research.com</a>
+            </div>
+        </div>
+        <script src="./bundle.js"></script>
+    </body>
+</html>

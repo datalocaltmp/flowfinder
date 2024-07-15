@@ -1,0 +1,45 @@
+{
+  "name": "flowfinder",
+  "version": "1.0.0",
+  "description": "flowfinder is a tool for visualizing Android Java execution through generated Frida scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:lint": "stylelint src/scss/*.scss  --custom-syntax postcss-scss",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "build:js": "webpack --mode=production",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*"
+  },
+  "author": "S11Research",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.8",
+    "autoprefixer": "^10.4.19",
+    "babel-loader": "^9.1.3",
+    "browser-sync": "^3.0.2",
+    "eslint": "^9.7.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "htmlnano": "^2.1.1",
+    "imagemin-cli": "^8.0.0",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^11.0.0",
+    "postcss-scss": "^4.0.9",
+    "posthtml": "^0.16.6",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-modules": "^0.9.1",
+    "stylelint": "^16.7.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
+  }
+}
