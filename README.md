@@ -2,9 +2,13 @@
 
 flowfinder is a simple webapp that takes .dot files representing Android Methods produced by jadx, generates corresponding frida-scripts, and using frida annotates the graph with metadata on method execution.
 
-## Running
+## Building & Running
+
+install with `npm install`
 
 run with `npm run watch`
+
+EZ-PZ!
 
 ## TODO
 
