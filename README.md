@@ -1,4 +1,4 @@
-![](./imgs/LOGO.png)
+![](./dist/imgs/LOGO.png)
 
 flowfinder is a simple webapp that takes .dot files representing Android Methods produced by jadx, generates corresponding frida-scripts, and using frida annotates the graph with metadata on method execution.
 
